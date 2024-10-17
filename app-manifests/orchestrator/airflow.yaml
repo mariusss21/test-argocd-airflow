@@ -8,12 +8,13 @@ spec:
   source:
     repoURL: 'https://github.com/mariusss21/test-argocd-airflow.git'
     path: /
-    targetRevision: HEAD
+    targetRevision: main
     helm:
       valueFiles:
         - values.yaml
   destination:
     name: 'test-argocd-airflow'
+    # https://kubernetes.default.svc
     namespace: airflow
     server: ''
   syncPolicy:
