@@ -6,15 +6,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/owshq-academy/ws-stack-dados-k8s.git'
-    path: infra/src/helm-charts/airflow
+    repoURL: 'https://github.com/mariusss21/test-argocd-airflow.git'
+    path: /
     targetRevision: HEAD
     helm:
       valueFiles:
         - values.yaml
   destination:
-    name: 'owshq-orion-ws-dev'
-    namespace: orchestrator
+    name: 'test-argocd-airflow'
+    namespace: airflow
     server: ''
   syncPolicy:
     syncOptions:

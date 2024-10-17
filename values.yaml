@@ -83,7 +83,7 @@ images:
     tag: ~
     # Specifying digest takes precedence over tag.
     digest: ~
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
 
   # To avoid images with user code, you can turn this to 'true' and
   # all the 'run-airflow-migrations' and 'wait-for-airflow-migrations' containers/jobs
@@ -91,7 +91,7 @@ images:
   # to run and wait for DB migrations .
   useDefaultImageForMigration: false
   # timeout (in seconds) for airflow-migrations to complete
-  migrationsWaitTimeout: 600
+  migrationsWaitTimeout: 60
   pod_template:
     # Note that `images.pod_template.repository` and `images.pod_template.tag` parameters
     # can be overridden in `config.kubernetes` section. So for these parameters to have effect
@@ -2511,7 +2511,7 @@ dags:
     #     # key needs to be gitSshKey
     #     gitSshKey: <base64_encoded_data>
     # and specify the name of the secret below
-    sshKeySecret: airflow-git-ssh-secret
+    # sshKeySecret: airflow-git-ssh-secret
     #
     # If you are using an ssh private key, you can additionally
     # specify the content of your known_hosts file, example:
