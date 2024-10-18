@@ -80,7 +80,7 @@ airflowVersion: "2.5.1"
 images:
   airflow:
     repository: mariusss21/airflow-custom
-    tag: 1.0.0
+    tag: latest
     # Specifying digest takes precedence over tag.
     digest: ~
     pullPolicy: Always
