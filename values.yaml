@@ -2471,7 +2471,7 @@ dags:
     # ssh example: git@github.com:apache/airflow.git
     # https example: https://github.com/apache/airflow.git
     # repo: git@github.com:mariusss21/teste-airflow-kubernetes.git
-    repo: https://github.com/mariusss21/teste-airflow-kubernetes
+    repo: https://github.com/mariusss21/teste-airflow-kubernetes.git
     branch: main
     rev: HEAD
     # The git revision (branch, tag, or hash) to check out, v4 only
@@ -2482,17 +2482,6 @@ dags:
     # subpath within the repo where dags are located
     # should be "" if dags are at repo root
     subPath: "dags"
-
-    apiVersion: v1
-    kind: Secret
-    metadata:
-      name: git-credentials
-      namespace: airflow
-    data:
-      GIT_SYNC_USERNAME: bWFyaXVzc3MyMQ==
-      GITSYNC_USERNAME: bWFyaXVzc3MyMQ==
-      GIT_SYNC_PASSWORD: MzI1MTEzNzVhPQ==
-      GITSYNC_PASSWORD: MzI1MTEzNzVhPQ==
     # if your repo needs a user name password
     # you can load them to a k8s secret like the one below
     #   ---
