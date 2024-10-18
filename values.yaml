@@ -977,6 +977,8 @@ scheduler:
 
 # Airflow create user job settings
 createUserJob:
+  useHelmHooks: false
+  applyCustomEnv: false
   # Limit the lifetime of the job object after it finished execution.
   ttlSecondsAfterFinished: 300
   # Command to use when running the create user job (templated).
@@ -1078,6 +1080,8 @@ createUserJob:
 
 # Airflow database migration job settings
 migrateDatabaseJob:
+  useHelmHooks: false
+  applyCustomEnv: false
   enabled: true
   # Limit the lifetime of the job object after it finished execution.
   ttlSecondsAfterFinished: 300
