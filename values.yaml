@@ -91,7 +91,7 @@ images:
   # to run and wait for DB migrations .
   useDefaultImageForMigration: false
   # timeout (in seconds) for airflow-migrations to complete
-  migrationsWaitTimeout: 600
+  migrationsWaitTimeout: 60
   pod_template:
     # Note that `images.pod_template.repository` and `images.pod_template.tag` parameters
     # can be overridden in `config.kubernetes` section. So for these parameters to have effect
