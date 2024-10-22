@@ -2471,7 +2471,7 @@ dags:
     # ssh example: git@github.com:apache/airflow.git
     # https example: https://github.com/apache/airflow.git
     # repo: git@github.com:mariusss21/teste-airflow-kubernetes.git
-    repo: https://github.com/mariusss21/teste-airflow-kubernetes.git
+    repo: https://github.com/mariusss21/test-argocd-airflow.git
     branch: main
     rev: HEAD
     # The git revision (branch, tag, or hash) to check out, v4 only
